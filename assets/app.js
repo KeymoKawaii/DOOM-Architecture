@@ -113,24 +113,29 @@ function onReady(callback) {
   
   // FUNCTION POUR LE DÉFILEMENT DES PANNEAUX ======================================
   function navUp(){
-    ids[count].classList.add("none");
+    ids[count].classList.add("animOut");
     setTimeout(function()
       { 
-        document.removeEventListener('touchstart', handleTouchStart, false);        
-        document.removeEventListener('touchmove', handleTouchMove, false);
-        document.removeEventListener('keydown');
+        ids[count].classList.add("none");
+        // document.removeEventListener('touchstart', handleTouchStart, false);        
+        // document.removeEventListener('touchmove', handleTouchMove, false);
+        // document.removeEventListener('keydown');
         ids[count].classList.remove("animIn");
         count++;
+        ids[count].classList.remove("animOut");
         ids[count].classList.add("animIn");
         ids[count].classList.remove("none");
-      }, 2000);
+      }, 500);
   }
   
   function navDown(){
+  ids[count].classList.add("animOut");
   ids[count].classList.add("none");
   ids[count].classList.remove("animIn");
   count--;
+  ids[count].classList.remove("animOut");
   ids[count].classList.add("animIn");
   ids[count].classList.remove("none");
+
   }
   // FUNCTION POUR LE DÉFILEMENT DES PANNEAUX ======================================

@@ -33,10 +33,9 @@
 .none{
   display: none;
 }
-.none>div{
-  animation: fadeOut 0.5s none;
+.animOut>div{
+    animation: fadeOut 2s none;
 }
-
 .animIn{
   display: block;
 }
@@ -116,6 +115,6 @@ body::-webkit-scrollbar{
     transform: translate(0px);
     
   }to{
-    transform: translate(500px);
+    transform: translate(-500px);
   }
 }
