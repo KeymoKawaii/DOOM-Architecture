@@ -1,0 +1,121 @@
+/* ===========================================================
+    0 - GLOBAL
+    1 - 
+    2 - 
+*/
+
+/* ================================== 0 - GLOBAL ============================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: "DOOM";
+    src: url("../fonts/AmazDooMLeft.ttf") format("truetype"),
+    url("../fonts/AmazDooMLeft2.ttf") format("truetype"),
+    url("../fonts/AmazDooMLeftOutline.ttf") format("truetype"),
+    url("../fonts/AmazDooMRight.ttf") format("truetype"),
+    url("../fonts/AmazDooMRight2.ttf") format("truetype"),
+    url("../fonts/AmazDooMRightOutline.ttf") format("truetype")
+}
+
+:root{
+    --color_1:#716a4e ;
+    --color_2: #4e3b35;
+    --color_3: #6c4b36;
+    --color_4: 	#b45e33;
+    --color_5: #1c3b33;
+    --color_6: #111111;
+    --color_7: #e6e6e6;
+}
+
+.none{
+  display: none;
+}
+.none>div{
+  animation: fadeOut 0.5s none;
+}
+
+.animIn{
+  display: block;
+}
+.animIn>div{
+  animation: fadeIn 2s none;
+}
+
+body{
+  overflow-x: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+#page{ 
+    display: none;
+    font-family: 'DOOM';
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background-color: var(--color_6);
+    box-shadow: -50px 0 50px 0 var(--color_7) inset; 
+}
+
+  #page>header, #page>section{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: var(--color_7);
+    font-size: 5rem;
+  }
+
+  #page header{
+    /* background-color: var(--color_4); */
+    z-index: 1;
+  }
+
+  #page #Present{
+    /* background-color: var(--color_5); */
+    z-index: 2;
+  }
+  #page #Classic{
+    /* background-color: var(--color_2); */
+    z-index: 3;
+  }
+  #page #Metal{
+    /* background-color: var(--color_1); */
+    z-index: 4;
+  }
+  #page #Alien{
+    /* background-color: var(--color_3); */
+    z-index: 5;
+  }
+
+/* ================================ 0 - KEYFRAME ============================== */
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    transform: translate(500px);
+    
+  }to{
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes fadeOut{
+  from{
+    transform: translate(0px);
+    
+  }to{
+    transform: translate(500px);
+  }
+}
