@@ -113,6 +113,7 @@ function onReady(callback) {
   
   // FUNCTION POUR LE DÉFILEMENT DES PANNEAUX ======================================
   function navUp(){
+    ids[count].classList.remove("animIn");
     ids[count].classList.add("animOut");
     setTimeout(function()
       { 
@@ -120,12 +121,11 @@ function onReady(callback) {
         // document.removeEventListener('touchstart', handleTouchStart, false);        
         // document.removeEventListener('touchmove', handleTouchMove, false);
         // document.removeEventListener('keydown');
-        ids[count].classList.remove("animIn");
         count++;
         ids[count].classList.remove("animOut");
         ids[count].classList.add("animIn");
         ids[count].classList.remove("none");
-      }, 500);
+      }, 2000);
   }
   
   function navDown(){
