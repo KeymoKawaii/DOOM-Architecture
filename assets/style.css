@@ -33,13 +33,13 @@
 .none{
   display: none;
 }
-.animOut>div{
+.animOut>article{
     animation: fadeOut 2s none;
 }
 .animIn{
   display: block;
 }
-.animIn>div{
+.animIn>article{
   animation: fadeIn 2s none;
 }
 
@@ -56,7 +56,7 @@ body::-webkit-scrollbar{
 
 #page{ 
     display: none;
-    font-family: 'DOOM';
+    font-family: 'roboto';
     width: 100vw;
     height: 100vh;
     z-index: 0;
@@ -101,8 +101,8 @@ body::-webkit-scrollbar{
 
 @keyframes fadeIn{
   from{
-    opacity: 0;
-    transform: translate(500px);
+    opacity: 0.5;
+    transform: translate(1000px);
     
   }to{
     opacity: 1;
@@ -112,9 +112,11 @@ body::-webkit-scrollbar{
 
 @keyframes fadeOut{
   from{
+    opacity: 1;
     transform: translate(0px);
     
   }to{
-    transform: translate(-500px);
+    opacity: 0.5;
+    transform: translate(-1000px);
   }
 }

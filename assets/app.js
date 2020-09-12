@@ -98,7 +98,7 @@ function onReady(callback) {
   
   // EVENT SUR LES TOUCHES DE DIRECTION DU CLAVIER =================================
   
-  document.addEventListener('keydown', (event) => {
+  document.addEventListener('keydown',  function keyboard(event) {
     const nomTouche = event.key;
   
     if (nomTouche === 'ArrowUp' && count<4 ) {
@@ -113,8 +113,10 @@ function onReady(callback) {
   
   // FUNCTION POUR LE DÉFILEMENT DES PANNEAUX ======================================
   function navUp(){
+    console.log('start');
+    document.getElementById("page").removeEventListener("onwheel", wheelHandler);
     document.removeEventListener("touchstart", handleTouchStart, { capture: false });
-    document.removeEventListener('touchmove', handleTouchMove, { capture: false });  
+    document.removeEventListener('touchmove', handleTouchMove, { capture: false });   
     ids[count].classList.remove("animIn");
     ids[count].classList.add("animOut");
     setTimeout(function()
