@@ -126,8 +126,21 @@ span{
       display: block;
       transform: skew(50deg, 0deg);
     }
-  #Presentation p:first-of-type{
-    padding-top: 5vh;
+    #Presentation p:first-of-type{
+      padding-top: 5vh;
+      padding-bottom: ;
+    }
+    #Presentation p:first-of-type:after{
+      content: " ";
+      width: 35px;
+      height: 35px;
+      background-color: var(--color_1);
+      display: block;
+      border-radius: 50%;
+      margin:2vh auto;
+    }
+  #Presentation p{
+    font-size: 1.5rem;
   }
 
 /* ================================== 2 - PRES ============================== */
