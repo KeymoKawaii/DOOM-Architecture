@@ -1,6 +1,6 @@
 /* ===========================================================
     0 - GLOBAL
-    1 - 
+    1 - HEADER
     2 - 
 */
 
@@ -30,19 +30,6 @@
     --color_7: #e6e6e6;
 }
 
-.none{
-  display: none;
-}
-.animOut>article{
-    animation: fadeOut 2s none;
-}
-.animIn{
-  display: block;
-}
-.animIn>article{
-  animation: fadeIn 2s none;
-}
-
 body{
   overflow-x: hidden;
   position: relative;
@@ -58,65 +45,31 @@ body::-webkit-scrollbar{
     display: none;
     font-family: 'roboto';
     width: 100vw;
-    height: 100vh;
-    z-index: 0;
-    background-color: var(--color_6);
-    box-shadow: -50px 0 50px 0 var(--color_7) inset; 
 }
 
-  #page>header, #page>section{
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
+/* ================================== 0 - GLOBAL ============================== */
+
+/* ================================== 1 - HEADER ============================== */
+
+header{
+  width: 100%;
+  height: 80vh;
+}
+  header nav{
+    background-image: url('../img/texture_back.png');
     text-align: center;
+    font-family: "DOOM";
+    width: 100vw;
+    padding: 10px 0;
+    position: fixed;
+  }
+  header a{
+    text-decoration: none;
     color: var(--color_7);
-    font-size: 5rem;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
   }
-
-  #page header{
-    /* background-color: var(--color_4); */
-    z-index: 1;
+  header a span{
+    font-size: 2.5rem;
   }
-
-  #page #Present{
-    /* background-color: var(--color_5); */
-    z-index: 2;
-  }
-  #page #Classic{
-    /* background-color: var(--color_2); */
-    z-index: 3;
-  }
-  #page #Metal{
-    /* background-color: var(--color_1); */
-    z-index: 4;
-  }
-  #page #Alien{
-    /* background-color: var(--color_3); */
-    z-index: 5;
-  }
-
-/* ================================ 0 - KEYFRAME ============================== */
-
-@keyframes fadeIn{
-  from{
-    opacity: 0.5;
-    transform: translate(1000px);
-    
-  }to{
-    opacity: 1;
-    transform: translate(0px);
-  }
-}
-
-@keyframes fadeOut{
-  from{
-    opacity: 1;
-    transform: translate(0px);
-    
-  }to{
-    opacity: 0.5;
-    transform: translate(-1000px);
-  }
-}
+/* ================================== 1 - HEADER ============================== */
