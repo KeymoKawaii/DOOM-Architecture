@@ -10,7 +10,7 @@ function onReady(callback) {
   
   function setVisible(selector, visible) {
     //Change le style de l'élément en fonction de ses paramètres via un Booléen
-    document.querySelector(selector).style.display = visible ? 'flex' : 'none';
+    document.querySelector(selector).style.display = visible ? 'block' : 'none';
   }
   
   //Se lance après la fonction callback, récupère la valeur de la page et de l'écran de chargement et leurs assigne 2 paramètres   
@@ -146,6 +146,23 @@ function onReady(callback) {
 
   // }
   // // FUNCTION POUR LE DÉFILEMENT DES PANNEAUX ======================================
+
+
+  window.onscroll = function() {scrollFunction()};
+  let Nav = document.getElementById("navbar");
+  let Link = document.getElementById("logo");
+
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    Nav.classList.remove("big_nav");
+    Nav.classList.add("small_nav");
+  } else {
+    Nav.classList.add("big_nav");
+    Nav.classList.remove("small_nav");
+  }
+}
+
 
   var swiper = new Swiper('.swiper-container', {
     pagination: {
