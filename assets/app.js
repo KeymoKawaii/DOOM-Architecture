@@ -163,18 +163,24 @@ function scrollFunction() {
   }
 }
 
+let slider = document.getElementById('slider');
 
-  var swiper = new Swiper('.swiper-container', {
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'progressbar',
-      freeMode: true
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });
+
+count = 0;
+
+let pre = document.getElementById('pre');
+let sui = document.getElementById('sui');
+
+pre.onclick = SlideMore;
+sui.onclick = SlideLess;
+
+function SlideMore(){
+  console.log(slider)
+  slider[0].display = 'none';
+  count ++;
+  slider[count].display = 'block';
+}
+
+function SlideLess(){
+  console.log('test');
+}
