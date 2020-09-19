@@ -5,7 +5,7 @@ function onReady(callback) {
         window.clearInterval(intervalId);
         callback.call(this);
       }
-    }, 500);
+    }, 50);
   }
   
   function setVisible(selector, visible) {
@@ -163,8 +163,11 @@ function scrollFunction() {
   }
 }
 
-let slider = document.getElementById('slider');
-
+let classic = document.getElementById('classic');
+let metal = document.getElementById('metal');
+let alien = document.getElementById('alien');
+let belsinki = document.getElementById('belsinki');
+const slider = [classic, metal, alien, belsinki];
 
 count = 0;
 
@@ -175,12 +178,26 @@ pre.onclick = SlideMore;
 sui.onclick = SlideLess;
 
 function SlideMore(){
-  console.log(slider)
-  slider[0].display = 'none';
-  count ++;
-  slider[count].display = 'block';
+  if (count < 3){
+    slider[count].classList.remove('block');
+    count ++;
+    slider[count].classList.add('block'); 
+  }
+  else{
+    slider[count].classList.remove('block');
+    count = 0;
+    slider[count].classList.add('block'); 
+  }
 }
 
 function SlideLess(){
-  console.log('test');
+  if (count >0){
+    slider[count].classList.remove('block');
+    count --;
+    slider[count].classList.add('block'); 
+  }else{
+    slider[count].classList.remove('block');
+    count = 3;
+    slider[count].classList.add('block'); 
+  }
 }
