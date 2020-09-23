@@ -148,31 +148,90 @@ span{
 
 /* ================================== 3 - SLIDER ============================== */
 
+#navigation{
+  background-color: var(--color_6);
+}
+
+#slider{
+  height: 50vh;
+  width: 100%;
+}
 #slider .block{
   opacity: 1;
+  left: 50%
 }
-#slider >div{
+
+#slider>article{
   opacity: 0;
   position: absolute;
   transition: 0.8s;
-  left: 0;
-  top: 0;
+  left: 100px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  min-width: 300px;
+}
+
+#slider>article>a{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: var(--color_7);
+  text-decoration: none;
+}
+
+#slider>article div{
+  width: auto;
+  min-width:300px;
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+#slider>article div p{
+  text-align: right;
+  font-size: 1rem;
+}
+#slider>article img{
+  width: 60%;
+  min-width: 300px;
+  display: block;
+  margin: auto;
 }
 #navigation button{
-  z-index: 10;
+  z-index: 2;
   width: 35px;
   height: 35px;
   position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+  color: var(--color_7);
+  background-color: transparent;
+  border: 1px var(--color_7) solid;
+  font-size: 1.5rem;
+  border-radius: 10px;
 }
 
 #navigation #pre{
-  left: 0;
-  top: 0;
+  left: 50px;
 }
 
 #navigation #sui{
-  right: 0;
-  top: 0;
+  right: 50px;
 }
 
 /* ================================== 3 - SLIDER ============================== */
+
+/* ================================== 4 - SECTION ============================= */
+
+.parallax{
+  background-image: url("../img/mine.jpg");
+  min-height: 50vh;
+  width: 130%;
+  margin-left: -15%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ================================== 4 - SECTION ============================= */

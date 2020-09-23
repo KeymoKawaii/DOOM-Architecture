@@ -169,7 +169,7 @@ let alien = document.getElementById('alien');
 let belsinki = document.getElementById('belsinki');
 const slider = [classic, metal, alien, belsinki];
 
-count = 0;
+
 
 let pre = document.getElementById('pre');
 let sui = document.getElementById('sui');
