@@ -80,14 +80,18 @@ header{
   nav a{
     text-decoration: none;
     color: var(--color_7);
+  }
+  nav h1{
     transition: 0.4s;
+  }
+  nav h1:hover{
+    text-decoration: none;
+    color: white;
+    text-shadow: var(--color_7) 1px 0 10px;
   }
   header img{
     width: 100%;
   }
-span{
-  transition: 0.4s;
-}
 
   /* div div{
     font-size: 50px;
