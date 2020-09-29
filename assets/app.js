@@ -201,3 +201,66 @@ if (count >0){
   slider[count].classList.add('block'); 
 }
 }
+
+let block = "PresG";
+let presGeneral = document.getElementById('presG');
+let presClassic = document.getElementById('presClassic');
+let presMetal = document.getElementById('presMetal');
+let presAlien = document.getElementById('presAlien');
+let presBelsinki = document.getElementById('presBelsinki');
+
+classic.onclick = showClassic;
+metal.onclick = showMetal;
+alien.onclick = showAlien;
+belsinki.onclick = showBelsinki;
+
+function showClassic(){
+  block = "classic";
+  showArticle()
+}
+
+function showMetal(){
+  block = "metal";
+  showArticle()
+}
+
+function showAlien(){
+  block = "alien";
+  showArticle()
+}
+
+function showBelsinki(){
+  block = "belsinki";
+  showArticle()
+}
+
+function showArticle(){
+  if (block === 'classic'){
+    presGeneral.classList.remove('block');
+    presClassic.classList.add('block');
+    presMetal.classList.remove('block');
+    presAlien.classList.remove('block');
+    presBelsinki.classList.remove('block');
+  }
+  else if (block === 'metal'){
+    presGeneral.classList.remove('block');
+    presClassic.classList.remove('block');
+    presMetal.classList.add('block');
+    presAlien.classList.remove('block');
+    presBelsinki.classList.remove('block');
+  }
+  else if (block === 'alien'){
+    presGeneral.classList.remove('block');
+    presClassic.classList.remove('block');
+    presMetal.classList.remove('block');
+    presAlien.classList.add('block');
+    presBelsinki.classList.remove('block');
+  }
+  else if (block === 'belsinki'){
+    presGeneral.classList.remove('block');
+    presClassic.classList.remove('block');
+    presMetal.classList.remove('block');
+    presAlien.classList.remove('block');
+    presBelsinki.classList.add('block');
+  }
+}
