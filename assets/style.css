@@ -134,18 +134,37 @@ header{
 }
 #Presentation .block{
   display: block;
+  animation: FadeIn 2s;
+}
+.firstpres{
+  margin: 20px 0;
+  position: relative;
+
+}
+.firstpres::after{
+  content: " ";
+  margin-top: 5px;
+  width: 80%;
+  height: 5px;
+  display: block;
+  transform: skew(-50deg, 0deg);
+  z-index: -1;
+  animation: translate2 2s;
 }
 
   #Presentation h1{
-    text-align: left;
-    font-size: 2rem;
+    text-align: center;
+    font-size: 4rem;
+    animation: push 1s;
   }
     #Presentation h1::after{
       content: " ";
-      width: 200px;
+      width: 60%;
       height: 5px;
       display: block;
-      transform: skew(50deg, 0deg);
+      transform: skew(-50deg, 0deg);
+      margin: auto;
+      animation: translate1 2s;
     }
     #Presentation p:first-of-type{
       padding-top: 5vh;
@@ -172,9 +191,9 @@ header{
 }
 /* ================================== 3 - PRESG ============================== */
 
-/* ================================== 4 - PRESCLASSIC ============================== */
+/* ================================== 4 - PRESCLASSIC ======================== */
 
-#presClassic h1::after{
+#presClassic h1::after,#presClassic .firstpres::after{
   background-color: var(--color_4);
 }
 #presClassic div{
@@ -314,3 +333,36 @@ header{
 }
 
 /* ================================== 4 - SECTION ============================= */
+
+/* ================================== 5 - KEYFRAMES =========================== */
+@keyframes FadeIn{
+  from{
+    opacity: 0;
+  }to{
+    opacity: 1;
+  }
+}
+@keyframes push{
+  from{
+    opacity: 0;
+    bottom: -50px;
+  }to{
+    opacity: 1;
+    bottom: 0px;
+  }
+}
+@keyframes translate1{
+  from{
+    width: 0px;
+  }to{
+    width: 60%;
+  }
+}
+@keyframes translate2{
+  from{
+    width: 0px;
+  }to{
+    width: 80%;
+  }
+}
+/* ================================== 5 - KEYFRAMES =========================== */
