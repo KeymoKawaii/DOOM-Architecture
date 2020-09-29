@@ -1,7 +1,8 @@
 /* ===========================================================
     0 - GLOBAL
     1 - HEADER
-    2 - PRES
+    2 - PRESG
+    3 - PRESCLASSIC
 */
 
 /* ================================== 0 - GLOBAL ============================== */
@@ -30,6 +31,10 @@
     --color_7: #e6e6e6;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body::-webkit-scrollbar{
   display: none;
 }
@@ -40,7 +45,7 @@ h1{
 
 #page{ 
     display: none;
-    font-family: 'roboto';
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100vw;
 }
 
@@ -139,27 +144,58 @@ header{
       content: " ";
       width: 200px;
       height: 5px;
-      background-color: var(--color_1);
       display: block;
       transform: skew(50deg, 0deg);
     }
     #Presentation p:first-of-type{
       padding-top: 5vh;
     }
-    #Presentation p:first-of-type:after{
-      content: " ";
-      width: 35px;
-      height: 35px;
-      background-color: var(--color_1);
-      display: block;
-      border-radius: 50%;
-      margin:2vh auto;
-    }
   #Presentation p{
     font-size: 1.5rem;
   }
 
 /* ================================== 2 - PRES ============================== */
+
+/* ================================== 3 - PRESG ============================== */
+
+#presG h1::after{
+  background-color: var(--color_1);
+}
+#presG p:first-of-type:after{
+  content: " ";
+  width: 35px;
+  height: 35px;
+  background-color: var(--color_1);
+  display: block;
+  border-radius: 50%;
+  margin:2vh auto;
+}
+/* ================================== 3 - PRESG ============================== */
+
+/* ================================== 4 - PRESCLASSIC ============================== */
+
+#presClassic h1::after{
+  background-color: var(--color_4);
+}
+#presClassic div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10vh;
+}
+#presClassic div p{
+  width: 35%;
+  min-width: 300px;
+  margin: auto;
+  text-align: left;
+}
+#presClassic div img{
+  width: 35%;
+  min-width: 300px;
+  margin: auto;
+}
+
+/* ================================== 4 - PRESCLASSIC ============================== */
 
 /* ================================== 3 - SLIDER ============================== */
 
@@ -239,11 +275,11 @@ header{
 }
 
 #navigation #pre{
-  left: 50px;
+  left: 3%;
 }
 
 #navigation #sui{
-  right: 50px;
+  right: 3%;
 }
 #slider #classic{
   background-image: url('../img/pandemonium.jpeg');
