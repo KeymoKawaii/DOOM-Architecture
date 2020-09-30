@@ -127,10 +127,11 @@ header{
 
 #Presentation{
   text-align: center;
-  padding: 100px 15%;
+  padding: 0 15% 100px 15%;
 }
 #Presentation article{
   display: none;
+  text-align: left;
 }
 #Presentation .block{
   display: block;
@@ -156,8 +157,15 @@ header{
     text-align: center;
     font-size: 4rem;
     animation: push 1s;
+    background-image: url('../img/texture_back.png');
+    width: 150%;
+    margin-left: -25%;
+    padding-top: 3vh;
+    color: var(--color_7);
+    margin-top: -5px;
+    box-shadow: var(--color_7) 5px -10px 5px inset;
   }
-    #Presentation h1::after{
+    /* #Presentation h1::after{
       content: " ";
       width: 60%;
       height: 5px;
@@ -165,7 +173,7 @@ header{
       transform: skew(-50deg, 0deg);
       margin: auto;
       animation: translate1 2s;
-    }
+    } */
     #Presentation p:first-of-type{
       padding-top: 5vh;
     }
@@ -206,12 +214,17 @@ header{
   width: 35%;
   min-width: 300px;
   margin: auto;
-  text-align: left;
 }
 #presClassic div img{
   width: 35%;
   min-width: 300px;
   margin: auto;
+  border: 5px solid var(--color_6);
+  transition: 0.8s;
+}
+#presClassic div img:hover{
+  transform: scale(1.1);
+  border: 5px dashed var(--color_6);
 }
 
 /* ================================== 4 - PRESCLASSIC ============================== */
@@ -337,7 +350,7 @@ header{
 /* ================================== 5 - KEYFRAMES =========================== */
 @keyframes FadeIn{
   from{
-    opacity: 0;
+    opacity: 0.25;
   }to{
     opacity: 1;
   }
