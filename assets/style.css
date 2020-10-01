@@ -165,15 +165,6 @@ header{
     margin-top: -5px;
     box-shadow: var(--color_7) 5px -10px 5px inset;
   }
-    /* #Presentation h1::after{
-      content: " ";
-      width: 60%;
-      height: 5px;
-      display: block;
-      transform: skew(-50deg, 0deg);
-      margin: auto;
-      animation: translate1 2s;
-    } */
     #Presentation p:first-of-type{
       padding-top: 5vh;
     }
@@ -181,6 +172,48 @@ header{
     font-size: 1.5rem;
   }
 
+  #Presentation div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10vh;
+  }
+  #Presentation div p{
+    width: 35%;
+    min-width: 300px;
+    margin: auto;
+    position: relative;
+  }
+  #Presentation div p:after{
+    content: '';
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: -10%;
+    top: 0%;
+    margin: 10px;
+    transform: translate(0%, 0%);
+  }
+  #Presentation div img{
+    width: 35%;
+    min-width: 300px;
+    margin: auto;
+    border: 5px solid var(--color_6);
+    transition: 0.8s;
+    margin: 10px;
+  }
+  #Presentation div img:hover{
+    transform: scale(1.1);
+    border: 5px dashed var(--color_6);
+  }
+  #Presentation div h2{
+    width: 100%;
+    text-align: center;
+    border-bottom: 5px var(--color_6) dashed;
+    padding-bottom: 2.5vh;
+    margin-bottom: 2.5vh;
+  }
+  
 /* ================================== 2 - PRES ============================== */
 
 /* ================================== 3 - PRESG ============================== */
@@ -201,33 +234,27 @@ header{
 
 /* ================================== 4 - PRESCLASSIC ======================== */
 
-#presClassic h1::after,#presClassic .firstpres::after{
-  background-color: var(--color_4);
-}
-#presClassic div{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 10vh;
-}
-#presClassic div p{
-  width: 35%;
-  min-width: 300px;
-  margin: auto;
-}
-#presClassic div img{
-  width: 35%;
-  min-width: 300px;
-  margin: auto;
-  border: 5px solid var(--color_6);
-  transition: 0.8s;
-}
-#presClassic div img:hover{
-  transform: scale(1.1);
-  border: 5px dashed var(--color_6);
+#presClassic h1::after,#presClassic .firstpres::after, #presClassic div p:after{
+  background-color: var(--color_3S);
 }
 
-/* ================================== 4 - PRESCLASSIC ============================== */
+/* ================================== 4 - PRESCLASSIC ========================= */
+
+/* ================================== 5 - PRESMETAL ========================= */
+
+#presMetal h1::after,#presMetal .firstpres::after, #presMetal div p:after{
+  background-color: var(--color_4)
+}
+
+/* ================================== 5 - PRESMETAL ========================= */
+
+/* ================================== 5 - PRESALIEN ========================= */
+
+#presAlien h1::after,#presAlien .firstpres::after, #presAlien div p:after{
+  background-color: var(--color_5)
+}
+
+/* ================================== 5 - PRESALIEN ========================= */
 
 /* ================================== 3 - SLIDER ============================== */
 
