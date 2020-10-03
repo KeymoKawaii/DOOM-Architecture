@@ -150,13 +150,12 @@ header{
   display: block;
   transform: skew(-50deg, 0deg);
   z-index: -1;
-  animation: translate2 2s;
+  animation: translate 2s;
 }
 
   #Presentation h1{
     text-align: center;
     font-size: 4rem;
-    animation: push 1s;
     background-image: url('../img/texture_back.png');
     width: 150%;
     margin-left: -25%;
@@ -164,10 +163,8 @@ header{
     color: var(--color_7);
     margin-top: -5px;
     box-shadow: var(--color_7) 5px -10px 5px inset;
+    margin-bottom: 5vh;
   }
-    #Presentation p:first-of-type{
-      padding-top: 5vh;
-    }
   #Presentation p{
     font-size: 1.5rem;
   }
@@ -175,6 +172,7 @@ header{
   #Presentation div{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
     padding-top: 10vh;
   }
@@ -183,16 +181,8 @@ header{
     min-width: 300px;
     margin: auto;
     position: relative;
-  }
-  #Presentation div p:after{
-    content: '';
-    width: 3px;
-    height: 100%;
-    position: absolute;
-    left: -10%;
-    top: 0%;
-    margin: 10px;
-    transform: translate(0%, 0%);
+    padding-left: 20px;
+    margin: 20px
   }
   #Presentation div img{
     width: 35%;
@@ -200,8 +190,9 @@ header{
     margin: auto;
     border: 5px solid var(--color_6);
     transition: 0.8s;
-    margin: 10px;
+    margin: 20px;
   }
+
   #Presentation div img:hover{
     transform: scale(1.1);
     border: 5px dashed var(--color_6);
@@ -230,30 +221,53 @@ header{
   border-radius: 50%;
   margin:2vh auto;
 }
+#presG p:first-of-type{
+  padding-top: 5vh;
+}
 /* ================================== 3 - PRESG ============================== */
 
 /* ================================== 4 - PRESCLASSIC ======================== */
 
-#presClassic h1::after,#presClassic .firstpres::after, #presClassic div p:after{
-  background-color: var(--color_3S);
+#presClassic h1::after,#presClassic .firstpres::after{
+  background-color: var(--color_2);
+}
+#presClassic div p{
+  border-left: var(--color_2) 5px solid;
 }
 
 /* ================================== 4 - PRESCLASSIC ========================= */
 
 /* ================================== 5 - PRESMETAL ========================= */
 
-#presMetal h1::after,#presMetal .firstpres::after, #presMetal div p:after{
+#presMetal h1::after,#presMetal .firstpres::after{
   background-color: var(--color_4)
+}
+#presMetal div p{
+  border-left: var(--color_4) 5px solid;
 }
 
 /* ================================== 5 - PRESMETAL ========================= */
 
 /* ================================== 5 - PRESALIEN ========================= */
 
-#presAlien h1::after,#presAlien .firstpres::after, #presAlien div p:after{
+#presAlien h1::after,#presAlien .firstpres::after{
   background-color: var(--color_5)
 }
+#presAlien div p{
+  border-left: var(--color_5) 5px solid;
+}
+/* ================================== 5 - PRESALIEN ========================= */
 
+/* ================================== 6 - PRESBELSINSKI ======================= */
+
+#presBelsinski h1::after,#presBelsinski .firstpres::after{
+  background-color: var(--color_1)
+}
+#presBelsinski div p{
+  border-left: var(--color_1) 5px solid;
+}
+
+/* ================================== 6 - PRESBELSINSKI ======================= */
 /* ================================== 5 - PRESALIEN ========================= */
 
 /* ================================== 3 - SLIDER ============================== */
@@ -350,8 +364,8 @@ header{
 #slider #alien{
   background-image: url('../img/alien_colony.jpeg');
 }
-#slider #belsinki{
-  background-image: url('../img/ruin_belsinki.jpeg');
+#slider #belsinski{
+  background-image: url('../img/ruin_belsinski.jpeg');
   background-position: center;
 }
 /* ================================== 3 - SLIDER ============================== */
@@ -382,23 +396,8 @@ header{
     opacity: 1;
   }
 }
-@keyframes push{
-  from{
-    opacity: 0;
-    bottom: -50px;
-  }to{
-    opacity: 1;
-    bottom: 0px;
-  }
-}
-@keyframes translate1{
-  from{
-    width: 0px;
-  }to{
-    width: 60%;
-  }
-}
-@keyframes translate2{
+
+@keyframes translate{
   from{
     width: 0px;
   }to{
@@ -406,3 +405,14 @@ header{
   }
 }
 /* ================================== 5 - KEYFRAMES =========================== */
+
+/* =================================== 0 - MEDIAQUERIES ========================*/
+@media screen and (max-width: 750px) {
+  #slider>article>a{
+    text-decoration: underline;
+    font-size: 1rem;
+  }
+  #Presentation h1{
+    font-size: 3.5rem;
+  }
+}

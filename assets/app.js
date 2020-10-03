@@ -166,8 +166,8 @@ if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
 let classic = document.getElementById('classic');
 let metal = document.getElementById('metal');
 let alien = document.getElementById('alien');
-let belsinki = document.getElementById('belsinki');
-const slider = [classic, metal, alien, belsinki];
+let Belsinski = document.getElementById('belsinski');
+const slider = [classic, metal, alien, belsinski];
 
 
 
@@ -207,12 +207,12 @@ let presGeneral = document.getElementById('presG');
 let presClassic = document.getElementById('presClassic');
 let presMetal = document.getElementById('presMetal');
 let presAlien = document.getElementById('presAlien');
-let presBelsinki = document.getElementById('presBelsinki');
+let presBelsinski = document.getElementById('presBelsinski');
 
 classic.onclick = showClassic;
 metal.onclick = showMetal;
 alien.onclick = showAlien;
-belsinki.onclick = showBelsinki;
+belsinski.onclick = showBelsinski;
 
 function showClassic(){
   block = "classic";
@@ -229,8 +229,8 @@ function showAlien(){
   showArticle()
 }
 
-function showBelsinki(){
-  block = "belsinki";
+function showBelsinski(){
+  block = "belsinski";
   showArticle()
 }
 
@@ -240,27 +240,27 @@ function showArticle(){
     presClassic.classList.add('block');
     presMetal.classList.remove('block');
     presAlien.classList.remove('block');
-    presBelsinki.classList.remove('block');
+    presBelsinski.classList.remove('block');
   }
   else if (block === 'metal'){
     presGeneral.classList.remove('block');
     presClassic.classList.remove('block');
     presMetal.classList.add('block');
     presAlien.classList.remove('block');
-    presBelsinki.classList.remove('block');
+    presBelsinski.classList.remove('block');
   }
   else if (block === 'alien'){
     presGeneral.classList.remove('block');
     presClassic.classList.remove('block');
     presMetal.classList.remove('block');
     presAlien.classList.add('block');
-    presBelsinki.classList.remove('block');
+    presBelsinski.classList.remove('block');
   }
-  else if (block === 'belsinki'){
+  else if (block === 'belsinski'){
     presGeneral.classList.remove('block');
     presClassic.classList.remove('block');
     presMetal.classList.remove('block');
     presAlien.classList.remove('block');
-    presBelsinki.classList.add('block');
+    presBelsinski.classList.add('block');
   }
 }
