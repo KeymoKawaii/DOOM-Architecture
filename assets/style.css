@@ -3,6 +3,12 @@
     1 - HEADER
     2 - PRESG
     3 - PRESCLASSIC
+    4 - PRESMETAL
+    5 - PRESALIEN
+    6 - PRESBELSINSKI
+    7 - SLIDER
+    8 - KEYFRAMES
+    9 - MEDIAQUERIES
 */
 
 /* ================================== 0 - GLOBAL ============================== */
@@ -34,6 +40,9 @@
 html{
   scroll-behavior: smooth;
 }
+body{
+  width: 100vw;
+}
 
 body::-webkit-scrollbar{
   display: none;
@@ -60,12 +69,6 @@ h1{
 .relative{
   position: relative;
 }
-.parallax{
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 /* ================================== 0 - GLOBAL ============================== */
 
 /* ================================== 1 - HEADER ============================== */
@@ -73,6 +76,9 @@ h1{
 header{
   width: 100%;
   padding-top: 7vh;
+}
+header video{
+  width: 100%;
 }
   nav{
     background-image: url('../img/texture_back.png');
@@ -98,10 +104,6 @@ header{
     width: 100%;
   }
 
-  /* div div{
-    font-size: 50px;
-  } */
-
   .big_nav{
     padding: 5px 0;
   }
@@ -109,7 +111,7 @@ header{
     font-size: 2rem;
   }
   .big_nav span{
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .small_nav{
@@ -136,6 +138,17 @@ header{
 #Presentation .block{
   display: block;
   animation: FadeIn 2s;
+}
+#Presentation ul{
+  display: flex;
+  list-style: none;
+}
+#Presentation ul li{
+  margin: 10px 5px;
+}
+#Presentation ul li a{
+  text-decoration: none;
+  color: var(--color_6);
 }
 .firstpres{
   margin: 20px 0;
@@ -210,19 +223,22 @@ header{
 /* ================================== 3 - PRESG ============================== */
 
 #presG h1::after{
-  background-color: var(--color_1);
+  background-color: var(--color_3);
 }
 #presG p:first-of-type:after{
   content: " ";
   width: 35px;
   height: 35px;
-  background-color: var(--color_1);
+  background-color: var(--color_3);
   display: block;
   border-radius: 50%;
   margin:2vh auto;
 }
 #presG p:first-of-type{
   padding-top: 5vh;
+}
+#presG ul li{
+  border-bottom: 2px solid var(--color_3);
 }
 /* ================================== 3 - PRESG ============================== */
 
@@ -233,6 +249,9 @@ header{
 }
 #presClassic div p{
   border-left: var(--color_2) 5px solid;
+}
+#presClassic ul li{
+  border-bottom: 2px solid var(--color_2);
 }
 
 /* ================================== 4 - PRESCLASSIC ========================= */
@@ -245,7 +264,9 @@ header{
 #presMetal div p{
   border-left: var(--color_4) 5px solid;
 }
-
+#presMetal ul li{
+  border-bottom: 2px solid var(--color_4);
+}
 /* ================================== 5 - PRESMETAL ========================= */
 
 /* ================================== 5 - PRESALIEN ========================= */
@@ -255,6 +276,9 @@ header{
 }
 #presAlien div p{
   border-left: var(--color_5) 5px solid;
+}
+#presAlien ul li{
+  border-bottom: 2px solid var(--color_5);
 }
 /* ================================== 5 - PRESALIEN ========================= */
 
@@ -266,14 +290,18 @@ header{
 #presBelsinski div p{
   border-left: var(--color_1) 5px solid;
 }
-
+#presBelsinski ul li{
+  border-bottom: 2px solid var(--color_1);
+}
 /* ================================== 6 - PRESBELSINSKI ======================= */
-/* ================================== 5 - PRESALIEN ========================= */
 
-/* ================================== 3 - SLIDER ============================== */
+/* ================================== 7 - SLIDER ============================== */
 
 #navigation{
   background-color: var(--color_6);
+}
+#navigation:hover{
+  cursor: pointer;
 }
 
 #slider{
@@ -322,10 +350,21 @@ header{
 #slider>article>a:hover{
   opacity: 0.15;
 }
+#slider>article>a:hover + .inslide{
+  opacity: 1;
+}
 
 #slider>article div p{
   text-align: right;
   font-size: 1rem;
+}
+#navigation .inslide{
+  background-color: var(--color_7);
+  color: var(--color_6);
+  height: 44px;
+  width: 80px;
+  position: relative;
+  vertical-align: middle;  
 }
 
 #navigation button{
@@ -368,27 +407,9 @@ header{
   background-image: url('../img/ruin_belsinski.jpeg');
   background-position: center;
 }
-/* ================================== 3 - SLIDER ============================== */
+/* ================================== 7 - SLIDER ============================== */
 
-/* ================================== 4 - SECTION ============================= */
-
-.classic .parallax{
-  background-image: url("../img/enfer.jpg");
-  min-height: 50vh;
-  width: 130%;
-  margin-left: -15%;
-}
-
-.metal .parallax{
-  background-image: url("../img/icone_peche.jpg");
-  min-height: 50vh;
-  width: 130%;
-  margin-left: -15%;
-}
-
-/* ================================== 4 - SECTION ============================= */
-
-/* ================================== 5 - KEYFRAMES =========================== */
+/* ================================== 8 - KEYFRAMES =========================== */
 @keyframes FadeIn{
   from{
     opacity: 0.25;
@@ -404,9 +425,9 @@ header{
     width: 80%;
   }
 }
-/* ================================== 5 - KEYFRAMES =========================== */
+/* ================================== 8 - KEYFRAMES =========================== */
 
-/* =================================== 0 - MEDIAQUERIES ========================*/
+/* =================================== 9 - MEDIAQUERIES ========================*/
 @media screen and (max-width: 750px) {
   #slider>article>a{
     text-decoration: underline;
@@ -414,5 +435,14 @@ header{
   }
   #Presentation h1{
     font-size: 3.5rem;
+  }
+  #navigation .inslide{
+    margin-top: 30px;
+  }
+  .big_nav a{
+    font-size: 1rem;
+  }
+  .big_nav span{
+    font-size: 2rem;
   }
 }
