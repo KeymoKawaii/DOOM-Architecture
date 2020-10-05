@@ -74,11 +74,15 @@ h1{
 /* ================================== 1 - HEADER ============================== */
 
 header{
+  background-color: var(--color_6);
   width: 100%;
   padding-top: 7vh;
 }
 header video{
-  width: 100%;
+  width: auto;
+  height: 70vh;
+  margin: auto;
+  display: block;
 }
   nav{
     background-image: url('../img/texture_back.png');
